@@ -1,0 +1,32 @@
+<%include partials/header%>
+<div class="ui main text container segment">
+	<div class="ui huge header">
+		EDIT <%=blog.title%>
+	</div>
+    <form  method="POST" class="ui form" action="/blogs/<%=blog._id%>?_method=PUT">
+
+        <div class="field">
+        	<label>POST TITLE</label>
+        	<input type="text" name="blog[title]" value=<%=blog.title%> >
+        </div>
+    	 <div class="field">
+        	<label> POST URL</label>
+        	<input type="text" name="blog[image]" value=<%=blog.image%> >
+        </div>
+        <div class="field">
+        	<label>POST CONTENT</label>
+        	<textarea name="blog[body]"><%=blog.body%></textarea>
+        </div>
+        <button type="submit">Update</button>
+        <div type="submit"  class="ui vertical animated button" tabindex="0" >
+           <div class="hidden content">Save</div>
+           <div class="visible content">
+           <i class="quote right icon"></i>
+          </div>
+        </div>
+    </form>
+</div>
+	
+
+
+<%include partials/footer%>

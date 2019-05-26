@@ -1,0 +1,31 @@
+<%include partials/header%>
+<div class="ui main text container segment">
+	<div class="ui huge header">
+		NEW POST
+	</div>
+    <form action="/blogs" method="POST" class="ui form">
+        <div class="field">
+        	<label>POST TITLE</label>
+        	<input type="text" name="blog[title]" placeholder="Title">
+        </div>
+    	 <div class="field">
+        	<label> POST URL</label>
+        	<input type="text" name="blog[image]" placeholder="Image">
+        </div>
+        <div class="field">
+        	<label>POST CONTENT</label>
+        	<textarea name="blog[body]"></textarea>
+        </div>
+        <button type="submit">Save</button>
+        <div type="submit"  class="ui vertical animated button" tabindex="0" >
+           <div class="hidden content">Save</div>
+           <div class="visible content">
+           <i class="quote right icon"></i>
+          </div>
+        </div>
+    </form>
+</div>
+	
+
+
+<%include partials/footer%>
